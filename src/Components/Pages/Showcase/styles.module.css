@@ -1,0 +1,31 @@
+.filterContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.filter{
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    min-width: 160px;
+    height: 12px;
+    font-size: 12px;
+}
+
+.mainContainer{
+    margin: 40px 98px 30px 98px;
+}
+
+.bookSection{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.book{
+    cursor: pointer;
+}

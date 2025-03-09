@@ -1,0 +1,55 @@
+.mainContainer{
+    margin: 105px 369px 176px 370px;
+    display: flex;
+}
+
+.picSection{
+    width: 475px;
+    height: 712px;
+    border-radius: 10px;
+}
+
+
+.descContainer{
+    margin-left: 61px;
+}
+
+.bookTag{
+    background: #F4F4F4;
+    padding: 5px 10px 5px 10px;
+    width: 237px;
+    height: 29px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 25px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookAuthor{
+    padding-left: 2px;
+    margin-top: 36px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #9B9B9B;
+}
+
+.bookName{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+}
+
+.bookDesc{
+    margin-top: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+}

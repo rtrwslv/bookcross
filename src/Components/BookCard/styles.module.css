@@ -1,0 +1,47 @@
+.bookCard{
+    max-width: 189px;
+    height: 390px;
+}
+
+.cover{
+    width: 189px;
+    height: 264px;
+    border-radius: 10px;
+}
+
+.bookTag{
+    background: #F4F4F4;
+    padding: 5px 10px 5px 10px;
+    width: 114px;
+    height: 18px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 12px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookAuthor{
+    font-size: 12px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.bookName{
+    font-size: 14px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700; 
+}
+
+.bookAvailible{
+    margin-top: 10px;
+    font-size: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400; 
+    color: #777777;
+}
