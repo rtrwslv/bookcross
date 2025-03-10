@@ -1,5 +1,5 @@
 .mainContainer{
-    margin: 105px 369px 176px 370px;
+    margin: 100px 200px;
     display: flex;
 }
 
@@ -19,7 +19,7 @@
     padding: 5px 10px 5px 10px;
     width: 237px;
     height: 29px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 10px;
     color: #000000;
     font-size: 25px;
@@ -52,4 +52,5 @@
     font-weight: 400;
     font-size: 18px;
     color: #000000;
+    margin-bottom: 36px;
 }

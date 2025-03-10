@@ -15,8 +15,7 @@
 }
 
 .navP:hover{
-    border-bottom: 1px solid white;
-    transition: 0.1s;
+    opacity: 0.8;
 }
 
 .title {
@@ -70,4 +69,8 @@
     padding: 10px 30px;
     border: none;
     border-radius: 10px;
+  }
+
+  .active{
+    border-bottom: 1px solid white;
   }

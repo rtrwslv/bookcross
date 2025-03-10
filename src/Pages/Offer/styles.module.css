@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.text{
+    font-size: 28px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 42px;
+
+}
+
+.inputLow{
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+    height: 36px;
+    width: 531px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.inputHigh {
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+    height: 66px;
+    width: 531px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    padding: 15px;
+    padding-top: 30px;
+    resize: none;
+    color: black;
+}
+
+.inputHigh::placeholder {
+    text-align: start;
+    line-height: 1.2;
+    color: black;
+    opacity: 1;
+}
+
+.inputLow::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.inputContainer{
+    display: grid;
+    gap: 22px;
+    justify-content: space-between;
+}

@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 
-import { Header } from "../../../Header/Header";
+import { Header } from "../../Components/Header/Header";
+import { Calendar } from "../../Components/Calendar/Calendar";
 
 export const Book = () => {
     const book = {
@@ -25,6 +26,7 @@ export const Book = () => {
                     <div className={styles.bookAuthor}>{book.author}</div>
                     <div className={styles.bookName}>{book.name}</div>
                     <div className={styles.bookDesc}>{book.description}</div>
+                    <Calendar />
                 </div>
             </div>
         </>

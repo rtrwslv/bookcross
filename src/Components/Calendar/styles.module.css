@@ -1,0 +1,31 @@
+.datePicker{
+    width: 100%;
+    height: 56px;
+}
+
+.button{
+    margin-top: 16px;
+    background-color: #121945;
+    border-radius: 8px;
+    height: 56px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.buttonDisabled{
+    margin-top: 16px;
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    height: 56px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}

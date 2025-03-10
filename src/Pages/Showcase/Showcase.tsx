@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
-import { Header } from "../../Header/Header";
-import { BookCard } from "../../BookCard/BookCard";
+import { Header } from "../../Components/Header/Header";
+import { BookCard } from "../../Components/BookCard/BookCard";
 import { useNavigate } from "react-router-dom";
 
 export const Showcase = () => {

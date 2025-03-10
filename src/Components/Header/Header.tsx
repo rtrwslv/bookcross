@@ -1,9 +1,10 @@
 import styles from "./styles.module.css";
 
 import logo from "../../Assets/logo.png";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 
 export const Header = () => {
+    const location = useLocation();
     return (
         <div className={styles.wrap}>
             <div className={styles.titleContainer}>
@@ -12,9 +13,24 @@ export const Header = () => {
             </div>
 
             <div className={styles.navContainer}>
-                <Link className={styles.navP} to="/showcase">КАТАЛОГ</Link>
-                <Link className={styles.navP} to="/catalogue">КНИГИ НА РУКАХ</Link>
-                <Link className={styles.navP} to="/catalogue">ПРЕДЛОЖИТЬ КНИГУ</Link>
+                <Link 
+                    className={`${styles.navP} ${location.pathname === "/showcase" ? styles.active : ""}`} 
+                    to="/showcase"
+                >
+                    КАТАЛОГ
+                </Link>
+                <Link 
+                    className={`${styles.navP} ${location.pathname === "/storage" ? styles.active : ""}`} 
+                    to="/storage"
+                >
+                    КНИГИ НА РУКАХ
+                </Link>
+                <Link 
+                    className={`${styles.navP} ${location.pathname === "/offer" ? styles.active : ""}`} 
+                    to="/offer"
+                >
+                    ПРЕДЛОЖИТЬ КНИГУ
+                </Link>
             </div>
 
             <div className={styles.inputContainer}>
