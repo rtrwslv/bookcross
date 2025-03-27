@@ -13,11 +13,11 @@ export const Storage = () => {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState<string>("");
     const [error, setError] = useState<string | null>(null);
-    const [loadingBooks, setLoadingBooks] = useState<boolean>(true); // Загрузка книг
-    const [loadingCategories, setLoadingCategories] = useState<boolean>(true); // Загрузка категорий
-    const [loading, setLoading] = useState<boolean>(true); // Общая загрузка
+    const [loadingBooks, setLoadingBooks] = useState<boolean>(true);
+    const [loadingCategories, setLoadingCategories] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(true);
 
-    const userId = localStorage.getItem("userId"); // Получаем userId из localStorage
+    const userId = localStorage.getItem("userId");
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -46,7 +46,7 @@ export const Storage = () => {
         };
 
         const fetchUserBookings = async () => {
-            if (!userId) return; // Если нет userId, не делаем запрос
+            if (!userId) return;
             try {
                 const response = await fetch(`http://localhost:8080/custom/api/v1/bookings/user/${userId}/active`);
                 if (!response.ok) {
@@ -56,7 +56,7 @@ export const Storage = () => {
                 if (data.success) {
                     const bookIds = data.body.map((booking: { bookId: string }) => booking.bookId);
                     if (bookIds.length === 0) {
-                        setLoading(false); // Если нет забронированных книг, загрузка прекращается
+                        setLoading(false);
                     }
                     const bookPromises = bookIds.map((bookId: string) =>
                         fetch(`http://localhost:8080/custom/api/v1/books/${bookId}`).then((res) => res.json())
@@ -80,7 +80,6 @@ export const Storage = () => {
     }, [userId]);
 
     useEffect(() => {
-        // Если данные о книгах и категориях загружены, индикатор загрузки исчезает
         if (!loadingBooks && !loadingCategories) {
             setLoading(false);
         }

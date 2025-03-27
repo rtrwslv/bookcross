@@ -64,7 +64,6 @@ export const Showcase = () => {
     }, []);
 
     useEffect(() => {
-        // Если данные о книгах и категориях загружены, индикатор загрузки исчезает
         if (!loadingBooks && !loadingCategories) {
             setLoading(false);
         }
@@ -73,7 +72,7 @@ export const Showcase = () => {
     const handleCategoryClick = (categoryId: string) => {
         if (selectedCategory === categoryId) {
             setSelectedCategory(null);
-            setFilteredBooks(books); // Показываем все книги
+            setFilteredBooks(books);
         } else {
             setSelectedCategory(categoryId);
             setFilteredBooks(books.filter((book) => book.category.id === categoryId)); // Фильтруем книги по категории

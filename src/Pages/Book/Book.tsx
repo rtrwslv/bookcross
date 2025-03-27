@@ -6,8 +6,8 @@ import { Calendar } from "../../Components/Calendar/Calendar";
 import { Book as BookData } from "../../Interfaces/Book";
 
 export const Book = () => {
-  const token = localStorage.getItem("token"); // Получаем токен из localStorage
-  console.log(token); // Выводим токен в консоль для отладки
+  const token = localStorage.getItem("token");
+  console.log(token);
   const { id } = useParams<{ id: string }>();
   const [book, setBook] = useState<BookData | null>(null);
   const [loading, setLoading] = useState(true);
