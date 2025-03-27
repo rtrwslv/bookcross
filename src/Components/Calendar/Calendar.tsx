@@ -1,28 +1,30 @@
 import styles from "./styles.module.css";
 import { DatePicker } from "antd";
 import { useEffect, useState } from "react";
-export const Calendar = () => {
-    const [date, setDate] = useState()
-    const [active, setActive] = useState(false)
+import dayjs from "dayjs";
 
-    const takeBook = () =>{
-        alert("Вы взяли книгу")
-    }
-    
-    useEffect(() => {
-        if (date){
-            setActive(true)
-        }
-        else{
-            setActive(false)
-        }
-    }, [date])
-
-
-    return (
-        <>
-        <DatePicker className={styles.datePicker} onChange={setDate} placeholder="Выберите дату" format='DD/MM/YYYY'/>
-        <div className={active ? styles.button : styles.buttonDisabled} onClick={takeBook}>Взять книгу</div>
-        </>
-    )
+interface CalendarProps {
+  selectedDate: Date | null;
+  onDateChange: (date: Date | null) => void;
+  minDate: Date;
 }
+
+export const Calendar = ({ selectedDate, onDateChange, minDate }: CalendarProps) => {
+  const handleDateChange = (date: any) => {
+    const newDate = date ? date.toDate() : null;
+    onDateChange(newDate);
+  };
+
+  return (
+    <>
+      <DatePicker
+        className={styles.datePicker}
+        onChange={handleDateChange}
+        placeholder="Выберите дату"
+        format="DD/MM/YYYY"
+        value={selectedDate ? dayjs(selectedDate) : null} // Преобразуем Date в Dayjs
+        disabledDate={(current) => current && current.isBefore(dayjs(minDate), 'day')} // Сравниваем Dayjs с Dayjs
+      />
+    </>
+  );
+};

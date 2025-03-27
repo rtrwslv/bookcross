@@ -1,7 +1,20 @@
-export interface IBook {
+export interface Book {
+    id: string;
+    userId: string | null;
     name: string;
-    tag: string;
     author: string;
-    pic: string;
-    availible: boolean;
-}
+    year: number;
+    category: {
+      id: string;
+      name: string;
+    };
+    description: string;
+    cover: string; // Теперь это просто строка (URL)
+    uploadDate: string;
+    maxReservationPeriod: number;
+    pageSize: number;
+    isReserved: boolean;
+    isPublished: boolean;
+    isUserBook: boolean;
+  }
+  

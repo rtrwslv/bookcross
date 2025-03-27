@@ -5,7 +5,7 @@ import { Header } from "../../Components/Header/Header";
 export const Offer = () => {
     return(
         <>
-        <Header />
+        <Header disableSearch={true} searchQuery="" onSearch={() => {}} />
         <div className={styles.container}>
             <div>
             <p className={styles.text}>
