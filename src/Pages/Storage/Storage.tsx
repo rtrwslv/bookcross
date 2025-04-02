@@ -120,11 +120,21 @@ export const Storage = () => {
     }
 
     if (!userId) {
-        return <div>Вы не авторизованы</div>;
+        return (
+            <div>
+                <Header disableSearch={false} onSearch={handleSearch} searchQuery={searchQuery} />
+                <div className={styles.noBooksMessage}>Вы не авторизованы</div>
+            </div>
+        );
     }
 
     if (books.length === 0) {
-        return <div>У вас нет забронированных книг</div>;
+        return (
+            <div>
+                <Header disableSearch={false} onSearch={handleSearch} searchQuery={searchQuery} />
+                <div className={styles.noBooksMessage}>У вас нет забронированных книг</div>
+            </div>
+        );
     }
 
     return (

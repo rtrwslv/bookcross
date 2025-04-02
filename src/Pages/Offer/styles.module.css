@@ -1,20 +1,19 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 80px;
 }
 
-.text{
+.text {
     font-size: 28px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     text-align: center;
     margin-bottom: 42px;
-
 }
 
-.inputLow{
+.inputLow {
     background: #F4F4F4;
     border-radius: 8px;
     border: none;
@@ -51,8 +50,91 @@
     opacity: 1;
 }
 
-.inputContainer{
+.inputContainer {
     display: grid;
     gap: 22px;
     justify-content: space-between;
+}
+
+.button {
+    margin-top: 16px;
+    background-color: #121945;
+    border-radius: 8px;
+    height: 56px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.buttonDisabled {
+    margin-top: 16px;
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    height: 56px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+/* Стили для области загрузки */
+.uploadArea {
+    margin: 0;
+    border: 2px dashed #d9d9d9;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s;
+    width: 561px;
+    box-sizing: border-box;
+}
+
+.uploadArea:hover {
+    border-color: #121945;
+}
+
+.uploadContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.uploadIcon {
+    font-size: 32px;
+    color: #121945;
+}
+
+.uploadText {
+    margin: 0;
+    color: #666;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+}
+
+.uploadStatus {
+    margin: 0;
+    color: #121945;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+}
+
+.errorMessage {
+    color: #ff4d4f;
+    margin-top: 8px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.fileInput {
+    display: none;
 }

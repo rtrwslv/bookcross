@@ -40,11 +40,9 @@ export const Auth = () => {
       const newToken = data.body.token;
       const newUserId = data.body.userId;
 
-      // Сохраняем токен и userId в localStorage
       localStorage.setItem("token", newToken);
       localStorage.setItem("userId", newUserId);
 
-      // Обновляем локальное состояние
       setToken(newToken);
       setUserId(newUserId);
 
