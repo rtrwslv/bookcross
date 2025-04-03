@@ -88,10 +88,10 @@ export const Storage = () => {
     const handleCategoryClick = (categoryId: string) => {
         if (selectedCategory === categoryId) {
             setSelectedCategory(null);
-            setFilteredBooks(books); // Показываем все книги
+            setFilteredBooks(books);
         } else {
             setSelectedCategory(categoryId);
-            setFilteredBooks(books.filter((book) => book.category.id === categoryId)); // Фильтруем книги по категории
+            setFilteredBooks(books.filter((book) => book.category.id === categoryId));
         }
     };
 

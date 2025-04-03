@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 interface HeaderProps {
   onSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
   searchQuery: string;
-  disableSearch: boolean;  // Добавляем новый проп
+  disableSearch: boolean;
 }
 
 export const Header = ({ onSearch, searchQuery, disableSearch }: HeaderProps) => {
@@ -47,8 +47,8 @@ export const Header = ({ onSearch, searchQuery, disableSearch }: HeaderProps) =>
             placeholder="Поиск"
             className={styles.search}
             value={searchQuery}
-            onChange={disableSearch ? undefined : onSearch} // Если disableSearch = true, обработчик не срабатывает
-            disabled={disableSearch} // Если disableSearch = true, поле поиска не активно
+            onChange={disableSearch ? undefined : onSearch}
+            disabled={disableSearch}
           />
         </label>
       </div>

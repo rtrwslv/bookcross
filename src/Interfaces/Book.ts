@@ -9,7 +9,7 @@ export interface Book {
       name: string;
     };
     description: string;
-    cover: string; // Теперь это просто строка (URL)
+    cover: string;
     uploadDate: string;
     maxReservationPeriod: number;
     pageSize: number;

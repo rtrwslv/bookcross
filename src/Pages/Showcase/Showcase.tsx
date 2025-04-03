@@ -13,10 +13,9 @@ export const Showcase = () => {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState<string>("");
     const [error, setError] = useState<string | null>(null);
-    const [loadingBooks, setLoadingBooks] = useState<boolean>(true); // Загрузка книг
-    const [loadingCategories, setLoadingCategories] = useState<boolean>(true); // Загрузка категорий
-    const [loading, setLoading] = useState<boolean>(true); // Общая загрузка
-
+    const [loadingBooks, setLoadingBooks] = useState<boolean>(true);
+    const [loadingCategories, setLoadingCategories] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(true);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -75,7 +74,7 @@ export const Showcase = () => {
             setFilteredBooks(books);
         } else {
             setSelectedCategory(categoryId);
-            setFilteredBooks(books.filter((book) => book.category.id === categoryId)); // Фильтруем книги по категории
+            setFilteredBooks(books.filter((book) => book.category.id === categoryId));
         }
     };
 

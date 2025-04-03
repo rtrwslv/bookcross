@@ -7,7 +7,6 @@ export const Auth = () => {
   const [userId, setUserId] = useState<string | null>(localStorage.getItem("userId"));
 
   useEffect(() => {
-    // Проверка при монтировании компонента, чтобы обновить состояние, если данные есть в localStorage
     const savedToken = localStorage.getItem("token");
     const savedUserId = localStorage.getItem("userId");
 
