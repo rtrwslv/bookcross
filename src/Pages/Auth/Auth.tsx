@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import styles from "./styles.module.css";
 import { Header } from "../../Components/Header/Header";
 import { useEffect, useState } from "react";
