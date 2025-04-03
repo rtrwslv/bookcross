@@ -7,11 +7,6 @@
 npm install
 ```  
 
-### Запуск тестов  
-```bash
-npm test
-```  
-
 ### Запуск проекта  
 ```bash
 npm start
